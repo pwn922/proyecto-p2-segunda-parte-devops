@@ -2,8 +2,8 @@ import request from "supertest";
 import app from "../src/server.js";
 import * as personas from "../src/personas.js";
 
-beforeEach(() => {
-  personas.reset();
+beforeEach(async () => {
+  await personas.reset();
 });
 
 describe("POST /personas", () => {
